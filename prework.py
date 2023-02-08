@@ -42,13 +42,13 @@ max_num_in_list(numbers)
 def is_leap_year(a_year):
     """This will determine if input is a leap year."""
     if a_year % 4 == 0:
-        print(True)
+        return True
     elif a_year % 400 == 0 and a_year % 100 == 0:
-        print(True)
+        return True
     else:
-        print(False)
+        return False
 
-is_leap_year(2024)
+print(is_leap_year(2024))
 
 # Question 5:
 # Write a function to check to see if all numbers in list are consecutive
@@ -58,9 +58,9 @@ is_leap_year(2024)
 def is_consecutive(a_list):
     """This will determine if a list has consecutive numbers."""
     if a_list == list(range(min(a_list), max(a_list)+1)):
-        print(True)
+        return True
     else:
-        print(False)
+        return False
 
 nums = [21, 22, 23, 25, 26]
-is_consecutive(nums)
+print(is_consecutive(nums))
