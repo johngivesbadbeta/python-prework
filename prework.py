@@ -12,16 +12,13 @@ hello_name('username')
 # Write a python function, first_odds that prints the odd numbers from 1-100 and
 # returns nothing.
 
-def first_odds(number):
-    """This diplays odd numbers."""
-    while number < 100:
-        number += 1
+def first_odds(numbers):
+    """This displays odd numbers."""
+    for number in range(numbers):
         if number % 2 != 0:
             print(number)
-        else:
-            break
 
-first_odds(1)
+first_odds(100)
 
 # Question 3: 
 # Please write a Python function, max_num_in_list to return the max number of a
@@ -41,14 +38,14 @@ max_num_in_list(numbers)
 
 def is_leap_year(a_year):
     """This will determine if input is a leap year."""
-    if a_year % 4 == 0:
+    if a_year % 4 == 0 and a_year % 100 != 0:
         return True
-    elif a_year % 400 == 0 and a_year % 100 == 0:
+    elif a_year % 100 and a_year % 400 == 0:
         return True
     else:
         return False
 
-print(is_leap_year(2024))
+print(is_leap_year(1900))
 
 # Question 5:
 # Write a function to check to see if all numbers in list are consecutive
