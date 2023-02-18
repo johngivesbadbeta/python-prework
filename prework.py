@@ -40,12 +40,12 @@ def is_leap_year(a_year):
     """This will determine if input is a leap year."""
     if a_year % 4 == 0 and a_year % 100 != 0:
         return True
-    elif a_year % 100 and a_year % 400 == 0:
+    elif a_year % 100 == 0 and a_year % 400 == 0:
         return True
     else:
         return False
 
-print(is_leap_year(1900))
+print(is_leap_year(2020))
 
 # Question 5:
 # Write a function to check to see if all numbers in list are consecutive
